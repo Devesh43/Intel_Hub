@@ -1,0 +1,20 @@
+{
+  "Haryana": [
+    { "district": "Panchkula", "totalSuspectNumbers": 1420, "blocked": 980, "notBlocked": 440, "plottedOnPratibimb": 720 },
+    { "district": "Gurugram", "totalSuspectNumbers": 2210, "blocked": 1510, "notBlocked": 700, "plottedOnPratibimb": 1180 },
+    { "district": "Faridabad", "totalSuspectNumbers": 1560, "blocked": 1090, "notBlocked": 470, "plottedOnPratibimb": 790 },
+    { "district": "Hisar", "totalSuspectNumbers": 930, "blocked": 630, "notBlocked": 300, "plottedOnPratibimb": 415 }
+  ],
+  "Uttar Pradesh": [
+    { "district": "Lucknow", "totalSuspectNumbers": 2010, "blocked": 1330, "notBlocked": 680, "plottedOnPratibimb": 1005 },
+    { "district": "Noida", "totalSuspectNumbers": 2860, "blocked": 1900, "notBlocked": 960, "plottedOnPratibimb": 1430 },
+    { "district": "Kanpur", "totalSuspectNumbers": 1980, "blocked": 1290, "notBlocked": 690, "plottedOnPratibimb": 990 },
+    { "district": "Varanasi", "totalSuspectNumbers": 2090, "blocked": 1350, "notBlocked": 740, "plottedOnPratibimb": 1035 }
+  ],
+  "Bihar": [
+    { "district": "Begusarai", "totalSuspectNumbers": 1810, "blocked": 1220, "notBlocked": 590, "plottedOnPratibimb": 905 },
+    { "district": "Patna", "totalSuspectNumbers": 2405, "blocked": 1615, "notBlocked": 790, "plottedOnPratibimb": 1200 },
+    { "district": "Nalanda", "totalSuspectNumbers": 1500, "blocked": 1010, "notBlocked": 490, "plottedOnPratibimb": 750 },
+    { "district": "Kathua handoff (JK liaison)", "totalSuspectNumbers": 1500, "blocked": 1045, "notBlocked": 455, "plottedOnPratibimb": 755 }
+  ]
+}

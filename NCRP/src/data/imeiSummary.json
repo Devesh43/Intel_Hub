@@ -1,0 +1,53 @@
+{
+  "tiles": [
+    {
+      "key": "imei-requested-blocking",
+      "title": "IMEI No. Requested for Blocking",
+      "value": 15420,
+      "unique": 12980,
+      "isFigureOnly": true
+    },
+    {
+      "key": "imei-blocked",
+      "title": "IMEI Numbers Blocked",
+      "value": 11760,
+      "unique": 10105,
+      "isFigureOnly": true
+    },
+    {
+      "key": "imei-unblocked",
+      "title": "IMEI Unblocked",
+      "value": 340,
+      "unique": 298,
+      "isFigureOnly": true
+    },
+    {
+      "key": "imei-against-reported",
+      "title": "Total IMEIs Against Reported Number on NCRP",
+      "value": 27680,
+      "buckets": [
+        { "label": ">=more than 3 times", "blocked": 5210, "notBlocked": 780, "plottedOnPratibimb": 0 },
+        { "label": "Reported 2 times", "blocked": 7440, "notBlocked": 1120, "plottedOnPratibimb": 0 },
+        { "label": "Reported 1 time", "blocked": 14030, "notBlocked": 4560, "plottedOnPratibimb": 0 }
+      ]
+    },
+    {
+      "key": "imei-intl-roaming",
+      "title": "IMEI Against Indian Mobile Numbers in International Roaming",
+      "value": 1890,
+      "isFigureOnly": true
+    },
+    {
+      "key": "imei-layer1-mule",
+      "title": "IMEI Related to Mobile Number Associated with Layer 1 Mule Account (Figure)",
+      "value": 4120,
+      "isFigureOnly": true
+    },
+    {
+      "key": "imei-ocwc",
+      "title": "IMEI Related to OCWC Associated Mobile Numbers (Figure)",
+      "value": 205,
+      "isFigureOnly": true
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "complaints": {
+    "1234567890": [
+      { "ackNumber": "21405260008879", "state": "Jammu & Kashmir", "district": "Kathua", "policeStation": "Kathua PS", "dateReported": "10/05/2026", "amountInvolved": 4.5, "status": "Under Investigation" },
+      { "ackNumber": "21405260009120", "state": "Haryana", "district": "Panchkula", "policeStation": "Sector 5 PS", "dateReported": "12/05/2026", "amountInvolved": 3.2, "status": "Chargesheet Filed" },
+      { "ackNumber": "21405260009544", "state": "Delhi", "district": "South Delhi", "policeStation": "Saket PS", "dateReported": "13/05/2026", "amountInvolved": 2.3, "status": "Under Investigation" }
+    ]
+  },
+  "posDetails": {
+    "1234": [
+      {
+        "posCode": "1234",
+        "posName": "Sharma Mobile Store",
+        "posAgentCode": "AGT-556",
+        "posAgentName": "R. Sharma",
+        "posAddress": "Main Bazar, Sector 5, Panchkula",
+        "district": "Panchkula",
+        "lsa": "Haryana",
+        "tsp": "Airtel",
+        "latitude": 30.6942,
+        "longitude": 76.8606,
+        "totalSimsIssued": 240,
+        "simsAlreadyDisconnected": 38,
+        "suspectedSims": 12,
+        "statusOfPos": "Under Review",
+        "dateOfAction": "14/05/2026",
+        "action": "Show Cause Notice Issued"
+      }
+    ]
+  },
+  "imeiDetails": {
+    "1234567890": [
+      { "imeiNumber": "3456789012345", "mobileNumber": "1234567890", "dateOfSimInsert": "10/05/2026", "imeiBlockingStatus": "Blocked", "imeiInternationalRoaming": "Yes", "plottedOnPratibimb": "Yes" }
+    ]
+  },
+  "blockingTimeline": {
+    "1234567890": [
+      {
+        "mobileNumber": "1234567890",
+        "tspLsa": "Airtel/Delhi",
+        "dateTimeOfReportingOnNcrp": "10/05/2026 16:25:35",
+        "dateTimeOfRequestSentForBlocking": "12/05/2026 16:25:35",
+        "dateTimeOfRequestSentToTsp": "12/05/2026 17:25:35",
+        "actualDateTimeOfBlocking": "13/05/2026 17:25:35",
+        "timeTakenByState": "2 days 00h 00m",
+        "timeTakenByTsp": "1 day 00h 00m",
+        "totalTimeTaken": "3 days 01h 00m"
+      }
+    ]
+  },
+  "pratibimb": {
+    "1234567890": {
+      "mobileNo": "919059841110",
+      "imei": "351635281986735",
+      "coordinates": "25.41324, 86.1436",
+      "address": "Main Road, Begusarai, Bihar, 851117, India",
+      "locationFetchTime": "14-05-2026 12:14",
+      "totalComplaints": 1,
+      "ncrpComplaint": "21405260008879 - Kathua, Jammu & Kashmir"
+    }
+  }
+}

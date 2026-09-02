@@ -1,0 +1,66 @@
+{
+  "default": [
+    {
+      "mobileNumber": "9876543210",
+      "ncrpComplaints": 2,
+      "associatedSuspectNumbers": 3,
+      "totalAmountInvolvedLac": 6.5,
+      "posCode": "PS-2231",
+      "linkedImei": 2,
+      "blockingStatus": "Blocked",
+      "internationalRoaming": "No",
+      "samanvayaProfile": "Yes",
+      "plottedOnPratibimb": "Yes",
+      "dotFlag": "Yes",
+      "simSupplyChain": "View/Make Request",
+      "sdr": "Click to view SDR"
+    },
+    {
+      "mobileNumber": "9123456780",
+      "ncrpComplaints": 1,
+      "associatedSuspectNumbers": 1,
+      "totalAmountInvolvedLac": 1.2,
+      "posCode": "PS-0947",
+      "linkedImei": 1,
+      "blockingStatus": "Not Blocked",
+      "internationalRoaming": "No",
+      "samanvayaProfile": "No",
+      "plottedOnPratibimb": "No",
+      "dotFlag": "No",
+      "simSupplyChain": "View/Make Request",
+      "sdr": "Click to view SDR"
+    }
+  ],
+  "Panchkula": [
+    {
+      "mobileNumber": "1234567890",
+      "ncrpComplaints": 3,
+      "associatedSuspectNumbers": 5,
+      "totalAmountInvolvedLac": 10,
+      "posCode": "1234",
+      "linkedImei": 4,
+      "blockingStatus": "Blocked",
+      "internationalRoaming": "Yes",
+      "samanvayaProfile": "Yes",
+      "plottedOnPratibimb": "Yes",
+      "dotFlag": "Yes",
+      "simSupplyChain": "View/Make Request",
+      "sdr": "Click to view SDR"
+    },
+    {
+      "mobileNumber": "1234509876",
+      "ncrpComplaints": 1,
+      "associatedSuspectNumbers": 2,
+      "totalAmountInvolvedLac": 3.4,
+      "posCode": "5678",
+      "linkedImei": 1,
+      "blockingStatus": "Not Blocked",
+      "internationalRoaming": "No",
+      "samanvayaProfile": "No",
+      "plottedOnPratibimb": "No",
+      "dotFlag": "No",
+      "simSupplyChain": "View/Make Request",
+      "sdr": "Click to view SDR"
+    }
+  ]
+}

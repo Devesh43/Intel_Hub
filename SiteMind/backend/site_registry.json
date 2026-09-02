@@ -1,0 +1,14 @@
+{
+  "sites": {
+    "www.trai.gov.in": {
+      "url": "https://www.trai.gov.in/",
+      "domain": "www.trai.gov.in",
+      "title": "Home | Telecom Regulatory Authority of India | Government of India",
+      "total_pages": 100,
+      "total_chunks": 90,
+      "indexed_at": 1788247341.8769338,
+      "collection_name": "site_www_trai_gov_in"
+    }
+  },
+  "active_domain": "www.trai.gov.in"
+}

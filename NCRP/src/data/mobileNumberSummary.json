@@ -1,0 +1,42 @@
+{
+  "tiles": [
+    {
+      "key": "suspect-mobile-total",
+      "title": "Suspect Mobile Number Reported on NCRP (Total Figure)",
+      "value": 48210,
+      "buckets": [
+        { "label": ">=more than 3 times", "blocked": 6120, "notBlocked": 940, "plottedOnPratibimb": 3810 },
+        { "label": "Reported 2 times", "blocked": 9040, "notBlocked": 1875, "plottedOnPratibimb": 6320 },
+        { "label": "Reported 1 time", "blocked": 21430, "notBlocked": 8805, "plottedOnPratibimb": 14110 }
+      ]
+    },
+    {
+      "key": "intl-roaming-total",
+      "title": "Indian Mobile Numbers in International Roaming (Total Figure)",
+      "value": 2145,
+      "buckets": [
+        { "label": "Reported >=2 times", "blocked": 310, "notBlocked": 62, "plottedOnPratibimb": 240 },
+        { "label": "Reported 1 time", "blocked": 705, "notBlocked": 158, "plottedOnPratibimb": 540 },
+        { "label": "Not Reported on NCRP", "blocked": 640, "notBlocked": 270, "plottedOnPratibimb": 0 }
+      ]
+    },
+    {
+      "key": "intl-mobile-reported",
+      "title": "International Mobile Number Reported on NCRP (Total Figure)",
+      "value": 1362,
+      "isFigureOnly": true
+    },
+    {
+      "key": "layer1-mule",
+      "title": "Mobile Number Associated with Layer 1 Mule Account (Figure)",
+      "value": 9875,
+      "isFigureOnly": true
+    },
+    {
+      "key": "ocwc-associated",
+      "title": "OCWC Associated Mobile Numbers (Figure)",
+      "value": 512,
+      "isFigureOnly": true
+    }
+  ]
+}

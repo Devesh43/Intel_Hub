@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intel Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="grid-overlay"></div>
+
+  <header class="hub-header">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Intel Hub</span>
+    </div>
+    <div class="clock" id="clock">--:--:--</div>
+  </header>
+
+  <main class="console">
+    <h1>Three tools. One launchpad.</h1>
+    <p class="sub">Pick a workspace below — each one runs as its own service on its own port.</p>
+
+    <div class="panels">
+
+      <article class="panel" data-target="website">
+        <div class="panel-top">
+          <span class="dot" data-status="website"></span>
+          <span class="panel-index">01</span>
+        </div>
+        <h2>Chat with Website</h2>
+        <p>Crawl any site and ask questions grounded in its actual content, with citations back to source pages.</p>
+        <div class="panel-meta">
+          <span class="meta-label">SiteMind</span>
+          <span class="meta-port" id="port-website"></span>
+        </div>
+        <button class="launch" data-target="website">Open workspace</button>
+      </article>
+
+      <article class="panel" data-target="documents">
+        <div class="panel-top">
+          <span class="dot" data-status="documents"></span>
+          <span class="panel-index">02</span>
+        </div>
+        <h2>Chat with Documents</h2>
+        <p>Upload PDFs, DOCX, CSV, or XLSX files and reason over them together, with multi-hop retrieval.</p>
+        <div class="panel-meta">
+          <span class="meta-label">Signal</span>
+          <span class="meta-port" id="port-documents"></span>
+        </div>
+        <button class="launch" data-target="documents">Open workspace</button>
+      </article>
+
+      <article class="panel" data-target="ncrp">
+        <div class="panel-top">
+          <span class="dot" data-status="ncrp"></span>
+          <span class="panel-index">03</span>
+        </div>
+        <h2>NCRP Dashboard</h2>
+        <p>Telecom intelligence dashboard — drill-downs, hierarchies, and case data at a glance.</p>
+        <div class="panel-meta">
+          <span class="meta-label">Cyber Intel Hub</span>
+          <span class="meta-port" id="port-ncrp"></span>
+        </div>
+        <button class="launch" data-target="ncrp">Open workspace</button>
+      </article>
+
+    </div>
+
+    <p class="footnote">Status dots go green once a service responds. If a workspace won't open, check that <code>orchestrator.py</code> is still running in your terminal.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

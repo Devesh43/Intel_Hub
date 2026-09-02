@@ -1,0 +1,34 @@
+{
+  "tiles": [
+    {
+      "key": "pos-suspect",
+      "title": "Suspect PoS Against Reported Number on NCRP (Total Figure)",
+      "value": 3260,
+      "isFigureOnly": true
+    },
+    {
+      "key": "pos-blacklisted",
+      "title": "Blacklisted PoS (Total Figure)",
+      "value": 812,
+      "isFigureOnly": true
+    },
+    {
+      "key": "pos-tsp-complaint",
+      "title": "PoS Against Which Complaint has been raised by TSP (Figure)",
+      "value": 540,
+      "isFigureOnly": true
+    },
+    {
+      "key": "pos-fir",
+      "title": "PoS against which FIR Registered (Figure)",
+      "value": 187,
+      "isFigureOnly": true
+    },
+    {
+      "key": "pos-repository",
+      "title": "PoS Repository (Total Figure)",
+      "value": 46200,
+      "isFigureOnly": true
+    }
+  ]
+}

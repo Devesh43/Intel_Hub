@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Signal · Multi-Document RAG Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="scanline" aria-hidden="true"></div>
+
+<div class="app">
+
+  <!-- ============ HEADER ============ -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" id="brandMark"></span>
+      <span class="brand-text">SIGNAL<span class="brand-sub">/rag</span></span>
+    </div>
+    <div class="status-rail">
+      <div class="status-chip" id="stepChip1" data-state="active">
+        <span class="chip-dot"></span>01 · KEY
+      </div>
+      <div class="rail-line"></div>
+      <div class="status-chip" id="stepChip2" data-state="idle">
+        <span class="chip-dot"></span>02 · ARCHIVE
+      </div>
+      <div class="rail-line"></div>
+      <div class="status-chip" id="stepChip3" data-state="idle">
+        <span class="chip-dot"></span>03 · QUERY
+      </div>
+    </div>
+  </header>
+
+  <main class="stage">
+
+    <!-- ============ SCREEN 1: API KEY ============ -->
+    <section class="screen" id="screen-key" data-active="true">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Connect your model</p>
+          <h1>Give the archive<br/>a signal to think with.</h1>
+          <p class="lede">Everything runs in this browser tab — documents, embeddings, and reasoning. Your Gemini API key is used only to call Google's API directly from your device and is never stored or sent anywhere else.</p>
+        </div>
+        <div class="hero-panel-visual" id="heroSvgHost" aria-hidden="true"></div>
+      </div>
+
+      <div class="card key-card">
+        <label class="field-label" for="apiKeyInput">Gemini API key</label>
+        <div class="key-input-row">
+          <input type="password" id="apiKeyInput" placeholder="AIza..." autocomplete="off" spellcheck="false" />
+          <button class="btn-ghost" id="toggleKeyVisibility" type="button" aria-label="Toggle key visibility">SHOW</button>
+        </div>
+        <p class="hint">Don't have one? Get a free key at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a></p>
+
+        <div class="saved-keys-block" id="savedKeysBlock" hidden>
+          <p class="field-label">Saved keys</p>
+          <div class="saved-keys-list" id="savedKeysList"></div>
+        </div>
+
+        <div class="save-key-row">
+          <input type="text" id="saveKeyName" placeholder="Name this key, e.g. &quot;personal&quot;" autocomplete="off" spellcheck="false" />
+          <button class="btn-ghost" id="saveKeyBtn" type="button">SAVE KEY</button>
+        </div>
+        <div class="key-status" id="saveKeyStatus"></div>
+
+        <div class="key-status" id="keyStatus"></div>
+        <button class="btn-primary" id="connectBtn">Verify &amp; Connect →</button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 2: UPLOAD ============ -->
+    <section class="screen" id="screen-upload" data-active="false">
+      <div class="section-head">
+        <p class="eyebrow">Step 02</p>
+        <h2>Load the archive</h2>
+        <p class="lede">Upload 1–20 documents. Each file is parsed, split into overlapping chunks, and embedded so the console can retrieve across all of them at once.</p>
+      </div>
+
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" multiple hidden
+          accept=".pdf,.docx,.txt,.csv,.xlsx" />
+        <div class="dropzone-inner">
+          <div class="dz-icon" id="dzIcon"></div>
+          <p class="dz-title">Drop files here, or <span class="dz-link">browse</span></p>
+          <p class="dz-sub">PDF · DOCX · TXT · CSV · XLSX &nbsp;·&nbsp; up to 20 files</p>
+        </div>
+      </div>
+
+      <div class="file-list" id="fileList"></div>
+
+      <div class="ingest-row">
+        <div class="ingest-meta">
+          <span id="fileCount">0</span> / 20 documents queued
+        </div>
+        <button class="btn-primary" id="ingestBtn" disabled>Build Index →</button>
+      </div>
+
+      <div class="progress-panel" id="progressPanel" hidden>
+        <div class="progress-log" id="progressLog"></div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 3: CHAT ============ -->
+    <section class="screen" id="screen-chat" data-active="false">
+      <div class="chat-shell">
+        <aside class="chat-side">
+          <p class="eyebrow">Archive</p>
+          <div class="doc-node-list" id="docNodeList"></div>
+
+          <div class="side-divider"></div>
+
+          <label class="toggle-row">
+            <input type="checkbox" id="multiHopToggle" />
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-label">
+              Deep reasoning
+              <small>Multi-hop query planning across sources</small>
+            </span>
+          </label>
+
+          <button class="btn-ghost btn-block" id="resetBtn">↺ New session</button>
+        </aside>
+
+        <div class="chat-main">
+          <div class="chat-log" id="chatLog">
+            <div class="chat-empty" id="chatEmpty">
+              <p class="empty-kicker">Ask something about the archive</p>
+              <div class="suggestion-row" id="suggestionRow"></div>
+            </div>
+          </div>
+
+          <form class="chat-input-row" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Ask a question about your documents…" autocomplete="off" />
+            <button type="submit" class="btn-primary" id="sendBtn">Ask</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot-note">
+    Runs client-side · calls the Gemini API directly · nothing is uploaded to any server but Google's
+  </footer>
+</div>
+
+<script src="js/vendor/pdf.min.js"></script>
+<script src="js/vendor/mammoth.browser.min.js"></script>
+<script src="js/vendor/xlsx.full.min.js"></script>
+<script src="js/vendor/papaparse.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

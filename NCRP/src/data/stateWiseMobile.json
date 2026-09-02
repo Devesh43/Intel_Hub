@@ -1,0 +1,12 @@
+{
+  "rows": [
+    { "state": "Haryana", "totalSuspectNumbers": 6120, "blocked": 4210, "notBlocked": 1910, "plottedOnPratibimb": 3105 },
+    { "state": "Uttar Pradesh", "totalSuspectNumbers": 8940, "blocked": 5870, "notBlocked": 3070, "plottedOnPratibimb": 4460 },
+    { "state": "Bihar", "totalSuspectNumbers": 7215, "blocked": 4890, "notBlocked": 2325, "plottedOnPratibimb": 3610 },
+    { "state": "Rajasthan", "totalSuspectNumbers": 5340, "blocked": 3420, "notBlocked": 1920, "plottedOnPratibimb": 2670 },
+    { "state": "Jharkhand", "totalSuspectNumbers": 4980, "blocked": 3105, "notBlocked": 1875, "plottedOnPratibimb": 2490 },
+    { "state": "West Bengal", "totalSuspectNumbers": 4110, "blocked": 2560, "notBlocked": 1550, "plottedOnPratibimb": 2055 },
+    { "state": "Delhi", "totalSuspectNumbers": 3505, "blocked": 2415, "notBlocked": 1090, "plottedOnPratibimb": 1752 },
+    { "state": "Maharashtra", "totalSuspectNumbers": 8000, "blocked": 5240, "notBlocked": 2760, "plottedOnPratibimb": 4000 }
+  ]
+}
