@@ -551,6 +551,10 @@ The architecture separates the individual tools while providing a common launch 
 
 ## License
 
-Add the appropriate license for your project before publishing the repository.
+This project was developed for the Indian Cybercrime Coordination Centre (I4C) as part of a two-month internship.
 
-If this repository is being submitted as part of a competition, internship, academic project, or organizational initiative, include the required attribution and ownership information here.
+The code and associated materials were created during the internship period for project development, demonstration, and evaluation purposes. Ownership, usage, distribution, and modification rights are subject to the policies and requirements of I4C and the organization under which the internship was conducted.
+
+The project should not be redistributed, commercialized, or presented as an official I4C product without appropriate authorization.
+
+
